@@ -29,6 +29,8 @@ Graphics and style are missing since I focused on functions.
 
 The tests need to be expanded, but did not have time to investigate. For example, the malformed json is actually not malformed and the saved image data on disk is not the same size as the downloaded image so another way to verify that the images are the same is needed.
 
+I would also like to improve the image display in the list since the placeholder image flashes on the screen when shown. I would start a background task to load all of the images and cache them to avoid downloading on the fly.
+
 ### Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered.
 
 While this was a good and relevant test for the position, I think it could have been more bounded. I could spend a lot of time making this a better app, but simply don't have the time as I have other activities and tasks that need to be done.
