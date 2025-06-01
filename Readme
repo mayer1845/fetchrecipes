@@ -2,9 +2,10 @@
 This is a test app to pull a list of recipes from a server and display them. This would not be a standalone app, but would be part of a full featured app with a search function to find recipes based on name or ingredients from multiple sites. Or, it could be a part of a company's app to show the recipes with some form of monitization included. That app would have more screens and features.
 
 When started, the app shows a list of available recipes loaded from the server. Recipes are organized into sections based on cuisine.  The image and name are shown for each recipe with two icone to indicate if the recipe has a document description or a video.
+![Main Screen](https://github.com/mayer1845/fetchrecipes/blob/main/main.png)
 
 When a row is selected, a detail screen show a web view with tabs to view the document or video. If one is not available, then that tab is not shown.
-
+![Detail Screen](https://github.com/mayer1845/fetchrecipes/blob/main/detail.png?raw=true)
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
 I focused on the functionality of the app. Since this is not a production app, I did not spend time on colors, styles, or icons. This allowed me to focus my time on the functions and demonstrate some working code.
