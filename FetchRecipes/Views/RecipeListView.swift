@@ -9,9 +9,9 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    @State private var cuisineDictionary: [String : CuisineMap] = [:]
+    @State private var cuisineDictionary : [String : CuisineMap] = [:]
     @State private var sortOrder = [KeyPathComparator(\Recipe.cuisine)]
-        
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("Recipes")
@@ -27,8 +27,7 @@ struct RecipeListView: View {
                             ForEach(recipeArray, id: \.self) { recipe in
                                 NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                     RecipeRowView(recipe: recipe)
-                                        .padding(.vertical, 5)
-                                }
+                                 }
                                 .padding(.horizontal, 5)
                             }
                             .listRowBackground(Color.clear)
@@ -37,15 +36,11 @@ struct RecipeListView: View {
                     }
                 }
                 .listStyle(PlainListStyle())
-                .safeAreaInset(edge: .bottom) {
-                    Text("")
-                        .frame(height: 5)
-                        .frame(maxWidth: .infinity)
-                }
+                .padding(.bottom, 5)
             }
             .scrollContentBackground(.hidden)
             .frame(maxWidth: .infinity)
-            .padding(.top, -8)
+            .padding(.top, 5)
             .overlay { if cuisineDictionary.isEmpty { ProgressView() } }
             .task { await readRecipe() }
             .refreshable { await readRecipe() }
@@ -74,9 +69,4 @@ struct RecipeListView: View {
             
         }
     }
-}
-
-#Preview {
-
-    RecipeListView()
 }
