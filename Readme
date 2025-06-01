@@ -1,13 +1,35 @@
 ### Summary: Include screen shots or a video of your app highlighting its features
+This is a test app to pull a list of recipes from a server and display them. This would not be a standalone app, but would be part of a full featured app with a search function to find recipes based on name or ingredients from multiple sites. Or, it could be a part of a company's app to show the recipes with some form of monitization included. That app would have more screens and features.
+
+When started, the app shows a list of available recipes loaded from the server. Recipes are organized into sections based on cuisine.  The image and name are shown for each recipe with two icone to indicate if the recipe has a document description or a video.
+
+When a row is selected, a detail screen show a web view with tabs to view the document or video. If one is not available, then that tab is not shown.
+
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
+I focused on the functionality of the app. Since this is not a production app, I did not spend time on colors, styles, or icons. This allowed me to focus my time on the functions and demonstrate some working code.
 
 ### Time Spent: Approximately how long did you spend working on this project? How did you allocate your time?
+I spent about 6 hours on this app. That does not include some research on various implementation options or thinking about how to build the app while doing other activities. I had to work on this in small periods when I had time available.
 
 ### Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
+The test requirment for no external libraries was a limitation. Using the CachedAsynchImage library would have bene much faster.
+
+I would rather have used a NoSQL library for image storage rather than the simple saving to disk file.
+
+I chose not to cache the recipe list data that would allow some access if the server were down.
+
+I put the save and retrieve image data functions in the RecipeImage file for convenience rather than creating a class to save and load files. A separate class would have allowed easy saves of other data.
 
 ### Weakest Part of the Project: What do you think is the weakest part of your project?
+The weakest part of the app is error handling. It needs ways to show an error loading the recipe list and show an error on the video web view as some of the videos are no longer available.
+
+Graphics and style are missing since I focused on functions.
+
+The tests need to be expanded, but did not have time to investigate. For example, the malformed json is actually not malformed and the saved image data on disk is not the same size as the downloaded image so another way to verify that the images are the same is needed.
 
 ### Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered.
+
+While this was a good and relevant test for the position, I think it could have been more bounded. I could spend a lot of time making this a better app, but simply don't have the time as I have other activities and tasks that need to be done.
 
 
