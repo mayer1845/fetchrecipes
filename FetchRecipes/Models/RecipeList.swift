@@ -28,4 +28,8 @@ struct RecipeList : Codable, Hashable {
     init() {
         recipes = []
     }
+    
+    mutating func add(recipe: Recipe) {
+        recipes.append(recipe)
+    }
 }

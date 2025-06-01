@@ -31,6 +31,11 @@ struct RecipeWebView: View {
         func updateUIView(_ uiView: WKWebView, context: Context) {
             uiView.load(request)
         }
+        
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            // Show error view
+        }
+
     }
 }
 

@@ -8,5 +8,5 @@
 import Foundation
 
 struct Common {
-    static let recipeUrlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+    static let recipeUrlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
 }
